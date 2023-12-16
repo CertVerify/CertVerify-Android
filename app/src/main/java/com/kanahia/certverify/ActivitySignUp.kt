@@ -6,15 +6,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-class SignIn : AppCompatActivity() {
+class ActivitySignUp : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
+        setContentView(R.layout.activity_sign_up)
 
-        var btn = findViewById<Button>(R.id.signInButton)
-        btn.setOnClickListener{
-            startActivity(Intent(this,ActivitySignUp::class.java))
+        var btn = findViewById<Button>(R.id.signUpButton)
+
+        btn.setOnClickListener {
+            startActivity(Intent(this,Home::class.java))
         }
     }
 }
